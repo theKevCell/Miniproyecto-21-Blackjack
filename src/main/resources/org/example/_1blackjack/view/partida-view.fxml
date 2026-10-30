@@ -1,16 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example._1blackjack.controller.PartidaController">
    <children>
       <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/Mesa%20de%20Blackjack%20Dorada%20con%20Emblema%2021.png" />
+            <Image url="@../images/DuelodeBlackjackenOroyNegro.png" />
          </image>
       </ImageView>
+      <AnchorPane fx:id="computadorCartasPane" layoutX="403.0" layoutY="102.0" prefHeight="274.0" prefWidth="304.0" styleClass="panel-translucido" stylesheets="@../styles/partida.css">
+         <children>
+            <Label layoutX="80.0" prefHeight="48.0" prefWidth="168.0" styleClass="section-title" stylesheets="@../styles/partida.css" text="COMPUTADOR" />
+            <Pane layoutX="32.0" layoutY="48.0" prefHeight="167.0" prefWidth="114.0" styleClass="panel-translucido" stylesheets="@../styles/partida.css">
+               <children>
+                  <ImageView fx:id="reverseCardAI1" fitHeight="167.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="cardFinalAI1" fitHeight="167.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane layoutX="160.0" layoutY="48.0" prefHeight="167.0" prefWidth="114.0" styleClass="panel-translucido" stylesheets="@../styles/partida.css">
+               <children>
+                  <ImageView fx:id="reverseCardAI2" fitHeight="167.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="cardFinalAI2" fitHeight="167.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Label layoutX="118.0" layoutY="255.0" prefHeight="20.0" prefWidth="69.0" styleClass="game-subtitle" stylesheets="@../styles/partida.css" text="Puntaje" />
+            <TextField fx:id="puntajeIA" editable="false" layoutX="104.0" layoutY="229.0" prefHeight="26.0" prefWidth="97.0" styleClass="puntaje" stylesheets="@../styles/partida.css" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="jugadorCartasPane" layoutX="83.0" layoutY="102.0" prefHeight="274.0" prefWidth="304.0" styleClass="panel-translucido" stylesheets="@../styles/partida.css">
+         <children>
+            <Label layoutX="106.0" prefHeight="48.0" prefWidth="114.0" styleClass="section-title" stylesheets="@../styles/partida.css" text="JUGADOR" />
+            <Pane layoutX="32.0" layoutY="48.0" prefHeight="167.0" prefWidth="114.0" styleClass="panel-translucido" stylesheets="@../styles/partida.css">
+               <children>
+                  <ImageView fx:id="reverseCardP1" fitHeight="167.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="cardFinalP1" fitHeight="167.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane layoutX="160.0" layoutY="48.0" prefHeight="167.0" prefWidth="114.0" styleClass="panel-translucido" stylesheets="@../styles/partida.css">
+               <children>
+                  <ImageView fx:id="reverseCardP2" fitHeight="167.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="cardFinalP2" fitHeight="167.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Label layoutX="118.0" layoutY="254.0" prefHeight="20.0" prefWidth="69.0" styleClass="game-subtitle" stylesheets="@../styles/partida.css" text="Puntaje" />
+            <TextField fx:id="puntajePlayer" editable="false" layoutX="104.0" layoutY="228.0" prefHeight="26.0" prefWidth="97.0" styleClass="puntaje" stylesheets="@../styles/partida.css" />
+         </children>
+      </AnchorPane>
+      <Pane layoutX="83.0" layoutY="383.0" prefHeight="54.0" prefWidth="304.0" styleClass="panel-datos" stylesheets="@../styles/partida.css">
+         <children>
+            <ImageView fitHeight="64.0" fitWidth="79.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/iconodemonedasdoradasapiladas.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="77.0" layoutY="3.0" prefHeight="48.0" prefWidth="83.0" styleClass="section-datos" stylesheets="@../styles/partida.css" text="Saldo" />
+            <TextField fx:id="saldoText" layoutX="152.0" layoutY="9.0" prefHeight="37.0" prefWidth="145.0" styleClass="datos" stylesheets="@../styles/partida.css" />
+         </children>
+      </Pane>
+      <Pane layoutX="407.0" layoutY="383.0" prefHeight="54.0" prefWidth="304.0" styleClass="panel-datos" stylesheets="@../styles/partida.css">
+         <children>
+            <ImageView fitHeight="48.0" fitWidth="49.0" layoutX="8.0" layoutY="3.0">
+               <image>
+                  <Image url="@../images/Fichasdecasinodoradas.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="65.0" layoutY="3.0" prefHeight="48.0" prefWidth="97.0" styleClass="section-datos" stylesheets="@../styles/partida.css" text="Apuesta" />
+            <TextField fx:id="apuestaText" layoutX="152.0" layoutY="9.0" prefHeight="37.0" prefWidth="145.0" styleClass="datos" stylesheets="@../styles/partida.css" />
+         </children>
+      </Pane>
+      <Button fx:id="rondaButton" layoutX="83.0" layoutY="455.0" minHeight="33.0" minWidth="202.0" mnemonicParsing="false" onAction="#iniciarRonda" prefHeight="33.0" prefWidth="202.0" stylesheets="@../styles/partida.css" text="Iniciar ronda">
+         <styleClass>
+            <String fx:value="menu-button" />
+            <String fx:value="primary-button" />
+         </styleClass>
+      </Button>
+      <Button fx:id="pedirButton" layoutX="293.0" layoutY="455.0" minHeight="33.0" minWidth="189.0" mnemonicParsing="false" onAction="#pedirCarta" prefHeight="33.0" prefWidth="202.0" stylesheets="@../styles/partida.css" text="Pedir Carta">
+         <styleClass>
+            <String fx:value="menu-button" />
+            <String fx:value="secondary-button" />
+         </styleClass>
+      </Button>
+      <Button fx:id="plantarButton" layoutX="505.0" layoutY="455.0" minHeight="33.0" minWidth="202.0" mnemonicParsing="false" onAction="#plantarse" prefHeight="33.0" prefWidth="202.0" stylesheets="@../styles/partida.css" text="Plantarse">
+         <styleClass>
+            <String fx:value="menu-button" />
+            <String fx:value="secondary-button" />
+         </styleClass>
+      </Button>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="538.0" minHeight="48.0" minWidth="120.0" mnemonicParsing="false" onAction="#volverMenu" prefHeight="48.0" prefWidth="120.0" stylesheets="@../styles/partida.css" text="Volver">
+         <styleClass>
+            <String fx:value="menu-button" />
+            <String fx:value="third-button" />
+         </styleClass>
+      </Button>
+      <Label fx:id="mensajeLabel" layoutX="185.0" layoutY="522.0" prefHeight="32.0" prefWidth="419.0" stylesheets="@../styles/partida.css" text="Ingresa tu apuesta para comenzar." />
    </children>
 </AnchorPane>
