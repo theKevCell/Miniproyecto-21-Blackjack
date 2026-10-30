@@ -1,7 +1,11 @@
+package org.example._1blackjack.tests;
 
-package org.example._1blackjack.model;
+import org.example._1blackjack.model.Carta;
+import org.example._1blackjack.model.JuegoBlackjack;
 
 import java.util.Scanner;
+
+// Test creado para verificar que la lógica funcione de manera correcta desde consola
 
 public class PruebaJuego {
 

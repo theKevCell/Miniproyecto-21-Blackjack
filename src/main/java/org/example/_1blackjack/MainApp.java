@@ -21,7 +21,7 @@ public class MainApp extends Application {
 
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
 
-        stage.getIcons().add(new Image(MainApp.class.getResourceAsStream("/org/example/_1blackjack/images/Emblema dorado de blackjack 21.png")));
+        stage.getIcons().add(new Image(MainApp.class.getResourceAsStream("/org/example/_1blackjack/images/Emblemadoradodeblackjack21.png")));
         stage.setTitle("21 Black Jack");
         stage.setScene(scene);
         stage.setResizable(false);

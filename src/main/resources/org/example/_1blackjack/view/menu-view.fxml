@@ -6,29 +6,17 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@../styles/menu.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@../styles/menu.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example._1blackjack.controller.MenuController">
    <children>
       <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/Blackjack%20dorado_%20duelo%20en%20el%20casino.png" />
+            <Image url="@../images/Blackjackdorado_dueloenelcasino.png" />
          </image>
       </ImageView>
-      <Button layoutX="250.0" layoutY="289.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="119.0" text="Iniciar Juego">
+      <Button fx:id="partidaButton" layoutX="250.0" layoutY="300.0" mnemonicParsing="false" onAction="#abrirPartida" prefHeight="46.0" prefWidth="119.0" text="Iniciar Juego">
          <styleClass>
             <String fx:value="menu-button" />
             <String fx:value="primary-button" />
-         </styleClass>
-      </Button>
-      <Button layoutX="250.0" layoutY="351.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="119.0" text="Instrucciones">
-         <styleClass>
-            <String fx:value="menu-button" />
-            <String fx:value="secondary-button" />
-         </styleClass>
-      </Button>
-      <Button layoutX="250.0" layoutY="413.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="119.0" text="Creditos">
-         <styleClass>
-            <String fx:value="menu-button" />
-            <String fx:value="secondary-button" />
          </styleClass>
       </Button>
    </children>
